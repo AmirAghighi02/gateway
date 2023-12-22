@@ -12,7 +12,7 @@ class Gateway extends Model
 
 
     /**
-     * @return BelongsToMany
+     * @return mixed
      */
     public function users()
     {
