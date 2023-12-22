@@ -10,6 +10,10 @@ class Gateway extends Model
 {
     use HasFactory;
 
+
+    /**
+     * @return BelongsToMany
+     */
     public function users()
     {
         return $this->belongsToMany(User::class);
@@ -25,7 +29,6 @@ class Gateway extends Model
      */
     public static function getConfig()
     {
-
         $configArray = self::all()->groupBy('name')->map(function ($value) {
             if (isset($value[1])) {
                 $defaultGateway = $value->where('is_default', true)->first();
