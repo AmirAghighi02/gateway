@@ -50,7 +50,7 @@ class GatewayServiceProviderLaravel6 extends ServiceProvider
 
         $this->publishes([
             $models => base_path('app/Models'),
-        ], 'views');
+        ], 'models');
 	}
 
 	/**
