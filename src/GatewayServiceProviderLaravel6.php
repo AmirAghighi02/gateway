@@ -24,6 +24,8 @@ class GatewayServiceProviderLaravel6 extends ServiceProvider
         $config = __DIR__ . '/../config/gateway.php';
         $migrations = __DIR__ . '/../migrations/';
         $views = __DIR__ . '/../views/';
+        $models = __DIR__. '/../models/';
+
 
         //php artisan vendor:publish --provider=Larabookir\Gateway\GatewayServiceProvider --tag=config
         $this->publishes([
@@ -45,6 +47,10 @@ class GatewayServiceProviderLaravel6 extends ServiceProvider
         ], 'views');
 
         //$this->mergeConfigFrom( $config,'gateway')
+
+        $this->publishes([
+            $models => base_path('app/Models'),
+        ], 'views');
 	}
 
 	/**
