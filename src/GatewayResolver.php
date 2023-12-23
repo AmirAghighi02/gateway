@@ -43,7 +43,7 @@ class GatewayResolver
     public function __construct($config = null, $port = null)
     {
 //		$this->config = app('config');
-        $this->config =
+        $this->config = \App\Models\Gateway::getConfig();
         $this->request = app('request');
 
         if ($this->config->has('gateway.timezone'))
