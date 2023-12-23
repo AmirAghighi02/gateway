@@ -25,6 +25,7 @@ class GatewayServiceProviderLaravel5 extends ServiceProvider
         $migrations = __DIR__ . '/../migrations/';
         $views = __DIR__ . '/../views/';
         $models = __DIR__. '/../models/';
+        $seeders = __DIR__ . '/../seeders/';
 
         //php artisan vendor:publish --provider=Larabookir\Gateway\GatewayServiceProvider --tag=config
         $this->publishes([
@@ -49,6 +50,10 @@ class GatewayServiceProviderLaravel5 extends ServiceProvider
         $this->publishes([
             $models => base_path('app/Models'),
         ], 'models');
+
+        $this->publishes([
+            $seeders => base_path('database/seeders'),
+        ], 'seeders');
 	}
 
 	/**
