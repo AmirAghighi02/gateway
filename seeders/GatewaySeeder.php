@@ -61,7 +61,7 @@ class GatewaySeeder extends Seeder
                     'mode' => 'sandbox', //'sandbox' or 'live'
                     'http.ConnectionTimeOut' => 30,
                     'log.LogEnabled' => true,
-                    'log.FileName' => \Database\Seeders\storage_path() . '/logs/paypal.log',
+                    'log.FileName' => storage_path() . '/logs/paypal.log',
                     /**
                      * Available option 'FINE', 'INFO', 'WARN' or 'ERROR'
                      *
