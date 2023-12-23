@@ -49,10 +49,12 @@ class GatewayServiceProviderLaravel6 extends ServiceProvider
 
         //$this->mergeConfigFrom( $config,'gateway')
 
+        // php artisan vendor:publish --provider=Larabookir\Gateway\GatewayServiceProvider --tag=models
         $this->publishes([
             $models => base_path('app/Models'),
         ], 'models');
 
+        // php artisan vendor:publish --provider=Larabookir\Gateway\GatewayServiceProvider --tag=seeders
         $this->publishes([
             $seeders => base_path('database/seeders'),
         ], 'seeders');
