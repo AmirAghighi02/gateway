@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Models\Traits;
+namespace Larabookir\Gateway\Traits;
 
 use App\Models\Gateway;
 use Illuminate\Database\Eloquent\Relations\BelongsToMany;
